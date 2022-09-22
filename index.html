@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movistart</title>
+    <script>
+      function price1() {
+        var value1 = document.getElementById("value1");
+        var newvalue = Math.random() * 200000;
+        newvalue = Math.round(newvalue);
+        value1.innerHTML = new Intl.NumberFormat("es-CO", {
+          style: "currency",
+          currency: "COP",
+        }).format(newvalue);
+      }
+      function price2() {
+        var value2 = document.getElementById("value2");
+        var newvalue2 = Math.random() * 200000;
+        newvalue2 = Math.round(newvalue2);
+        value2.innerHTML = new Intl.NumberFormat("es-CO", {
+          style: "currency",
+          currency: "COP",
+        }).format(newvalue2);
+      }
+      function price3() {
+        var value3 = document.getElementById("value3");
+        var newvalue3 = Math.random()*13;
+        newvalue3 = Math.round(newvalue3);
+        value3.innerHTML =`x ${newvalue3
+        }` 
+    }
+    function price4() {
+        var value4 = document.getElementById("value4");
+        var newvalue4 = Math.random()*13;
+        newvalue4 = Math.round(newvalue4);
+        value4.innerHTML =`x ${newvalue4}` 
+    }
+    </script>
+    <style>
+      div {
+        margin-top: 4px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+      }
+      .container {
+        display: flex;
+        flex-direction: row;
+        margin-right: 20px;
+      }
+      .card {
+        box-shadow: 5px 5px 5px 5px gray;
+        width: 300px;
+        border-radius: 12px;
+        padding: 10px;
+        margin-right: 40px;
+      }
+      .row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 200px;
+      }
+      .title {
+        color: #029ef5;
+        text-align: center;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        text-align: center;
+      }
+      .valuemg {
+        font-size: 50px;
+      }
+      .mgsimetric {
+        font-size: 20px;
+      }
+      .price {
+        font-size: 30px;
+      }
+      .monthly {
+      }
+      .btnDiscount {
+        background-color: rgb(46, 142, 244);
+        border-radius: 19px;
+        color: white;
+        width: 80px;
+        height: 20px;
+        border: 0px;
+      }
+      .normalprice {
+        text-decoration: line-through;
+        color: gray;
+      }
+      .btnmain {
+        background-color: #0b2739;
+        border-radius: 19px;
+        color: white;
+        width: 170px;
+        height: 30px;
+        border: 0px;
+      }
+      .btnmain:hover {
+        background: radial-gradient(rgb(198, 198, 198), rgb(154, 153, 153));
+      }
+      .moreinfo {
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="title">
+          Si ya tienes un plan postpago paga 200 Megas y recibe
+        </div>
+        <div class="valuemg">300</div>
+        <div class="mgsimetric">Megas Simetricas</div>
+        <div class="row">
+          <div id="value1" class="price">$71.493</div>
+          <div class="monthly">
+            <div id="value3">x12</div>
+            <div>meses</div>
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <input class="btnDiscount" type="button" value="Ahora 30%" onclick="price3()" />
+          </div>
+          <div class="normalprice">Normal $99.990</div>
+        </div>
+        <div>
+          <input
+            class="btnmain"
+            type="button"
+            value="Te llamamos"
+            onclick="price1()"
+          />
+        </div>
+        <div>ver mas beneficios</div>
+      </div>
+      <div class="card">
+        <div class="title">
+          Si ya tienes un plan postpago paga 200 Megas y recibe
+        </div>
+        <div class="valuemg">300</div>
+        <div class="mgsimetric">Megas Simetricas</div>
+        <div class="row">
+          <div id="value2" class="price">$71.493</div>
+          <div class="monthly">
+            <div id="value4">x12</div>
+            <div>meses</div>
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <input class="btnDiscount" type="button" value="Ahora 30%" onclick="price4()" />
+          </div>
+          <div class="normalprice">Normal $99.990</div>
+        </div>
+        <div>
+          <input
+            class="btnmain"
+            type="button"
+            value="Te llamamos"
+            onclick="price2()"
+          />
+        </div>
+        <div>ver mas beneficios</div>
+      </div>
+    </div>
+  </body>
+</html>
